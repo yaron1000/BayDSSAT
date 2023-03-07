@@ -1,4 +1,4 @@
-from BayDSSAT import CSWconnect
+from BayDSSAT import CSWconnect, BayWeather
 
 print('WaterBalance imported')
 

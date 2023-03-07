@@ -24,8 +24,8 @@ APPROLE_ID = os.environ['APPROLE_ID']
 APPROLE_SECRET = os.environ['APPROLE_SECRET']
 
 client = hvac.Client(url='https://vault.agro.services')
-client.auth_approle(APPROLE_ID, APPROLE_SECRET)
-#client.auth.approle.login(APPROLE_ID, APPROLE_SECRET)
+#client.auth_approle(APPROLE_ID, APPROLE_SECRET)
+client.auth.approle.login(APPROLE_ID, APPROLE_SECRET)
 secrets = client.read('secret/csw/service-identities/marketdevtrialinglatam')
 
 if 'data' in secrets and type(secrets['data']['data']) == str:
