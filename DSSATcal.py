@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import DSSATTools
 import h3
-from WaterBalance import CSWconnect
+from BayDSSAT import CSWconnect
 import duckdb
 from skopt import gp_minimize
 from multiprocessing import Pool
@@ -466,7 +466,7 @@ if __name__ == '__main__':
     fields = df.index.unique()
        
     # Number of cores in one machine
-    n_cores = 25
+    n_cores = 30
         
     # Horizontal scaling for n hardwares
     fields_hard = np.array_split(fields, n_hards)

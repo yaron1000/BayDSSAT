@@ -4,7 +4,7 @@ Retrieving weather data from CSW.
 """
 from datetime import datetime
 import numpy as np
-from ..CSW.connect import CSWconnect
+from BayDSSAT.CSW.connect import CSWconnect
 
 class BayWeather:
     """Class to get weather data from CSW.
@@ -160,3 +160,4 @@ class BayWeather:
         WPD.name = 'WPD'
 
         return WPD
+
