@@ -1,8 +1,9 @@
 # Imports
 import sys
+import os
 import pandas as pd
 import numpy as np
-import DSSATTools
+from DSSATTools import *
 import h3
 from BayDSSAT import CSWconnect
 import duckdb
