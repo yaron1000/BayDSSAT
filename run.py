@@ -8,10 +8,11 @@ domino = Domino(
     host=os.environ["DOMINO_API_HOST"],
 )
 
-n_jobs = 29
+n_jobs = 30 
 
 for i in range(n_jobs+1):
     domino_run = domino.runs_start(
         ["DSSATcal.py", str(i), str(n_jobs)], title="Scaling DSSAT calibration, job number: " + str(i)
     )
+
 
