@@ -470,11 +470,11 @@ if __name__ == '__main__':
     n_cores = 25 
         
     # Horizontal scaling for n hardwares
-    fields_hard = np.array_split(fields, n_hards)
+    fields_hard = np.array_split(fields, int(n_hards))
    
     # Parallel processing for n_cores
     with Pool(n_cores) as pool:
-        calibration = pool.map(DSSAT_CalPlots, fields_hard[job])
+        calibration = pool.map(DSSAT_CalPlots, fields_hard[int(job)])
        
 
     loadDSSATpars(calibration, 'soybeans', 'brazil')    
